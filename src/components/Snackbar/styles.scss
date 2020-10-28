@@ -1,0 +1,31 @@
+.snackbar {
+  position: fixed;
+  right: 30px;
+  bottom: 15px;
+  z-index: 1;
+}
+
+.snackbar.show {
+  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+@-webkit-keyframes fadein {
+  from {bottom: -15px; opacity: 0;}
+  to {bottom: 15px; opacity: 1;}
+}
+
+@keyframes fadein {
+  from {bottom: -15px; opacity: 0;}
+  to {bottom: 15px; opacity: 1;}
+}
+
+@-webkit-keyframes fadeout {
+  from {bottom: 15px; opacity: 1;}
+  to {bottom: -15px; opacity: 0;}
+}
+
+@keyframes fadeout {
+  from {bottom: 15px; opacity: 1;}
+  to {bottom: -15px; opacity: 0;}
+}

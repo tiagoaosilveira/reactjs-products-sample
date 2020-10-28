@@ -1,0 +1,60 @@
+@charset "utf-8";
+@import "~bulma/sass/utilities/mixins";
+
+// COLORS
+$primary: #26c2d5;
+$info: #26c2d5;
+$success: #23D160;
+$warning: #FFDD57;
+$danger: #FF3860;
+$light: #2a2264;
+$dark: #363636;
+
+// TEXT
+$text: #4A4A4A;
+$link: #3273DC;
+$body-family: BlinkMacSystemFont, -apple-system, "Segoe UI", "Roboto", "Oxygen",
+  "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+  "Helvetica", "Arial", sans-serif;
+$title-family: false;
+$button-family: false;
+
+// BREAKPOINTS
+$gap: 32px;
+$tablet: 769px;
+$desktop: 960px + (2 * $gap);
+$widescreen: 1152px + (2 * $gap);
+$fullhd: 1344px + (2 * $gap);
+$widescreen-enabled: true;
+$fullhd-enabled: false;
+
+// LAYOUT
+$section-padding: 3rem 1.5rem;
+$section-padding-medium: 1rem 1.5rem;
+$section-padding-large: 1rem 1.5rem;
+
+// FOOTER
+$footer-background-color: #2a2264;
+$footer-color: white;
+$footer-padding: 2rem 1.5rem 2rem;
+
+// LOADING
+.container {
+  &.is-loading {
+      position: relative;
+      pointer-events: none;
+      opacity: 0.5;
+      &:after {
+          @include loader;
+          position: absolute;
+          top: calc(50% - 2.5em);
+          left: calc(50% - 2.5em);
+          width: 5em;
+          height: 5em;
+          border-width: 0.25em;
+      }
+  }
+}
+
+// IMPORT BULMA
+@import "~bulma/bulma.sass";
